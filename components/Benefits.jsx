@@ -40,7 +40,7 @@ export default function Benefits() {
         <div className="grid md:grid-cols-2 gap-6">
           {benefits.map((item, i) => (
             <ScrollAnimation key={i} delay={i * 100}>
-              <div className="bg-white rounded-2xl p-8 shadow-[0_2px_8px_rgba(0,0,0,0.08)]">
+              <div className="bg-white rounded-2xl p-8 shadow-[0_2px_8px_rgba(0,0,0,0.08)] h-full">
                 <span className="inline-flex items-center justify-center w-9 h-9 rounded-lg bg-primary-light text-xs font-bold text-primary mb-5">{item.number}</span>
                 <h3 className="text-[17px] font-bold text-heading mb-3">{item.title}</h3>
                 <p className="text-sm text-body leading-relaxed">{item.description}</p>

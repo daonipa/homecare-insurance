@@ -10,7 +10,7 @@ import StickyCTA from "@/components/StickyCTA";
 
 export default function Home() {
   return (
-    <main className="overflow-x-hidden">
+    <main className="overflow-x-hidden pb-20 md:pb-0">
       <Hero />
       <Problem />
       <Solution />

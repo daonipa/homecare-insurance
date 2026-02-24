@@ -40,7 +40,7 @@ const stats = [
 
 export default function Trust() {
   return (
-    <section className="py-20 md:py-24 bg-[#0F0F0F]">
+    <section className="py-20 md:py-24 bg-dark">
       <div className="max-w-4xl mx-auto px-6">
         <ScrollAnimation>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
@@ -49,7 +49,7 @@ export default function Trust() {
                 <p className="text-3xl md:text-4xl font-bold text-white mb-2 tracking-tight">
                   <AnimatedNumber target={stat.number} suffix={stat.suffix} />
                 </p>
-                <p className="text-sm text-[#666666]">{stat.label}</p>
+                <p className="text-sm text-[#999999]">{stat.label}</p>
               </div>
             ))}
           </div>

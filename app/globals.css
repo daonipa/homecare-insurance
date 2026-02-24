@@ -13,23 +13,6 @@
   --color-dark-surface: #1A1A1A;
 }
 
-:root {
-  --primary: #059669;
-  --primary-dark: #047857;
-  --primary-light: #ECFDF5;
-  --text-primary: #111111;
-  --text-secondary: #555555;
-  --text-muted: #999999;
-  --bg-section: #F7F7F7;
-  --border: #E5E5E5;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
   font-family: var(--font-noto-sans-kr), 'Noto Sans KR', -apple-system, BlinkMacSystemFont, sans-serif;
   color: #111111;

@@ -33,8 +33,8 @@ export default function FAQ() {
     <section className="py-24 md:py-32 bg-white">
       <div className="max-w-3xl mx-auto px-6">
         <ScrollAnimation>
-          <div className="text-center mb-14">
-            <p className="text-sm tracking-[0.15em] uppercase text-muted mb-4 font-medium">FAQ</p>
+          <div className="text-center mb-16">
+            <p className="text-xs tracking-[0.2em] uppercase text-muted mb-4 font-medium">FAQ</p>
             <h2 className="text-2xl md:text-[2.5rem] font-bold text-heading leading-tight">
               자주 묻는 질문
             </h2>
@@ -58,10 +58,10 @@ export default function FAQ() {
                 </button>
                 <div
                   className={`overflow-hidden transition-all duration-300 ${
-                    openIndex === i ? "max-h-40 opacity-100 pb-6" : "max-h-0 opacity-0"
+                    openIndex === i ? "max-h-60 opacity-100 pb-6" : "max-h-0 opacity-0"
                   }`}
                 >
-                  <p className="text-sm text-body leading-relaxed pr-12">{faq.answer}</p>
+                  <p className="text-sm text-body leading-relaxed pr-4 md:pr-12">{faq.answer}</p>
                 </div>
               </div>
             </ScrollAnimation>
