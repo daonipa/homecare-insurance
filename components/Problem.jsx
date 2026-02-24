@@ -13,7 +13,7 @@ const problems = [
     icon: Clock,
     title: "가족의 시간이 멈춥니다",
     description: "간병을 위해 직장을 그만두는 가족. 경제적 부담과 심리적 소진이 동시에 찾아옵니다.",
-    color: "#3182F6",
+    color: "#059669",
   },
   {
     icon: Wallet,
