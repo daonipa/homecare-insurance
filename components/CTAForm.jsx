@@ -51,11 +51,11 @@ export default function CTAForm({ source = "homecare-insurance" }) {
 
   if (isSuccess) {
     return (
-      <section id="cta-form" className="py-24 md:py-32 bg-surface">
+      <section id="cta-form" className="py-28 md:py-36 bg-[#0F0F0F]">
         <div className="max-w-md mx-auto px-6 text-center">
-          <div className="bg-white rounded-2xl p-10 border border-line">
-            <div className="w-12 h-12 rounded-full bg-[#059669] mx-auto mb-6 flex items-center justify-center">
-              <svg className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+          <div className="bg-white rounded-2xl p-10 shadow-[0_8px_32px_rgba(0,0,0,0.3)]">
+            <div className="w-14 h-14 rounded-full bg-[#059669] mx-auto mb-6 flex items-center justify-center shadow-[0_0_20px_rgba(5,150,105,0.3)]">
+              <svg className="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
               </svg>
             </div>
@@ -71,21 +71,21 @@ export default function CTAForm({ source = "homecare-insurance" }) {
   }
 
   return (
-    <section id="cta-form" className="py-24 md:py-32 bg-surface">
+    <section id="cta-form" className="py-28 md:py-36 bg-[#0F0F0F]">
       <div className="max-w-md mx-auto px-6">
         <ScrollAnimation>
-          <div className="text-center mb-10">
-            <h2 className="text-2xl md:text-3xl font-bold text-heading mb-3">
+          <div className="text-center mb-12">
+            <h2 className="text-2xl md:text-3xl font-bold text-white mb-3">
               무료 상담 신청
             </h2>
-            <p className="text-body text-[15px]">
+            <p className="text-[#888888] text-[15px]">
               강제 가입 없이, 내 상황에 맞는 보험료만 확인하세요
             </p>
           </div>
         </ScrollAnimation>
 
         <ScrollAnimation delay={150}>
-          <form onSubmit={handleSubmit} className="bg-white rounded-2xl p-8 border border-line space-y-5">
+          <form onSubmit={handleSubmit} className="bg-white rounded-2xl p-8 md:p-10 space-y-6 shadow-[0_8px_32px_rgba(0,0,0,0.3)]">
             <div>
               <label className="block text-sm font-medium text-heading mb-2">이름</label>
               <input
@@ -93,7 +93,7 @@ export default function CTAForm({ source = "homecare-insurance" }) {
                 placeholder="홍길동"
                 value={form.name}
                 onChange={(e) => setForm({ ...form, name: e.target.value })}
-                className="w-full px-4 py-3.5 rounded-xl border border-line text-[15px] placeholder:text-muted bg-transparent transition-all duration-200"
+                className="w-full px-4 py-3.5 rounded-xl border border-[#D5D5D5] text-[15px] placeholder:text-muted bg-transparent transition-all duration-200"
               />
             </div>
 
@@ -104,13 +104,13 @@ export default function CTAForm({ source = "homecare-insurance" }) {
                 placeholder="010-0000-0000"
                 value={form.phone}
                 onChange={(e) => setForm({ ...form, phone: formatPhone(e.target.value) })}
-                className="w-full px-4 py-3.5 rounded-xl border border-line text-[15px] placeholder:text-muted bg-transparent transition-all duration-200"
+                className="w-full px-4 py-3.5 rounded-xl border border-[#D5D5D5] text-[15px] placeholder:text-muted bg-transparent transition-all duration-200"
               />
             </div>
 
             <div>
               <label className="block text-sm font-medium text-heading mb-2">통화 가능 시간</label>
-              <div className="grid grid-cols-2 gap-2">
+              <div className="grid grid-cols-2 gap-2.5">
                 {CALL_TIMES.map((time) => (
                   <button
                     key={time}
@@ -118,8 +118,8 @@ export default function CTAForm({ source = "homecare-insurance" }) {
                     onClick={() => setForm({ ...form, callTime: time })}
                     className={`py-3 px-4 rounded-xl text-sm font-medium border transition-all duration-200 cursor-pointer ${
                       form.callTime === time
-                        ? "border-primary bg-primary-light text-primary"
-                        : "border-line text-body hover:border-[#CCCCCC]"
+                        ? "border-primary bg-primary-light text-primary shadow-[0_0_0_1px_rgba(5,150,105,0.3)]"
+                        : "border-[#D5D5D5] text-body hover:border-[#AAAAAA] hover:bg-[#FAFAFA]"
                     }`}
                   >
                     {time}
@@ -135,7 +135,7 @@ export default function CTAForm({ source = "homecare-insurance" }) {
             <button
               type="submit"
               disabled={isSubmitting}
-              className="w-full flex items-center justify-center gap-2 bg-primary hover:bg-primary-dark disabled:opacity-50 text-white font-semibold text-[15px] py-4 rounded-xl transition-all duration-300 cursor-pointer"
+              className="w-full flex items-center justify-center gap-2 bg-primary hover:bg-primary-dark disabled:opacity-50 text-white font-semibold text-base py-4.5 rounded-xl transition-all duration-300 cursor-pointer shadow-[0_2px_10px_rgba(5,150,105,0.25)] hover:shadow-[0_4px_16px_rgba(5,150,105,0.35)]"
             >
               {isSubmitting ? (
                 <Loader2 className="w-5 h-5 animate-spin" />

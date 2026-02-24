@@ -14,11 +14,11 @@ export default function Solution() {
   };
 
   return (
-    <section className="py-24 md:py-32 bg-surface">
+    <section className="py-28 md:py-36 bg-surface">
       <div className="max-w-4xl mx-auto px-6">
         <ScrollAnimation>
-          <div className="text-center mb-14">
-            <p className="text-sm tracking-[0.15em] uppercase text-muted mb-4 font-medium">Solution</p>
+          <div className="text-center mb-16">
+            <p className="text-xs tracking-[0.2em] uppercase text-muted mb-4 font-medium">Solution</p>
             <h2 className="text-2xl md:text-[2.5rem] font-bold text-heading leading-tight mb-5">
               재가급여보험이 해결합니다.
             </h2>
@@ -28,11 +28,11 @@ export default function Solution() {
           </div>
         </ScrollAnimation>
 
-        <div className="grid md:grid-cols-2 gap-4 mb-12">
+        <div className="grid md:grid-cols-2 gap-5 mb-14">
           {features.map((item, i) => (
             <ScrollAnimation key={i} delay={i * 80}>
-              <div className="bg-white rounded-2xl p-6 border border-line hover:border-[#CCCCCC] transition-colors duration-300">
-                <h4 className="font-semibold text-heading mb-1.5">{item.title}</h4>
+              <div className="bg-white rounded-2xl p-7 border border-[#E0E0E0] shadow-[0_2px_8px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_24px_rgba(0,0,0,0.1)] hover:-translate-y-1 transition-all duration-300">
+                <h4 className="font-bold text-heading mb-1.5">{item.title}</h4>
                 <p className="text-sm text-muted">{item.desc}</p>
               </div>
             </ScrollAnimation>
@@ -43,7 +43,7 @@ export default function Solution() {
           <div className="text-center">
             <button
               onClick={scrollToForm}
-              className="bg-heading hover:bg-black text-white font-semibold px-8 py-3.5 rounded-full transition-colors duration-300 cursor-pointer text-[15px]"
+              className="bg-[#111111] hover:bg-black text-white font-semibold px-10 py-4 rounded-full transition-all duration-300 cursor-pointer shadow-[0_2px_10px_rgba(0,0,0,0.15)] hover:shadow-[0_6px_20px_rgba(0,0,0,0.25)] hover:scale-[1.02] active:scale-[0.98]"
             >
               무료 설계 받기
             </button>
