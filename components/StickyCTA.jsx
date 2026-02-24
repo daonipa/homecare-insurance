@@ -19,10 +19,10 @@ export default function StickyCTA() {
   if (!show) return null;
 
   return (
-    <div className="sticky-cta fixed bottom-0 left-0 right-0 z-50 p-4 bg-white/80 backdrop-blur-lg border-t border-[var(--border)] md:hidden">
+    <div className="sticky-cta fixed bottom-0 left-0 right-0 z-50 p-4 bg-white/90 backdrop-blur-lg border-t border-line md:hidden">
       <button
         onClick={scrollToForm}
-        className="w-full bg-[var(--primary)] hover:bg-[var(--primary-dark)] text-white font-bold py-3.5 rounded-xl transition-all duration-300 cursor-pointer active:scale-95"
+        className="w-full bg-primary hover:bg-primary-dark text-white font-semibold py-3.5 rounded-xl transition-all duration-300 cursor-pointer"
       >
         무료 상담 신청하기
       </button>

@@ -30,40 +30,36 @@ export default function FAQ() {
   const [openIndex, setOpenIndex] = useState(null);
 
   return (
-    <section className="py-20 md:py-28 bg-white">
-      <div className="max-w-3xl mx-auto px-5">
+    <section className="py-24 md:py-32 bg-white">
+      <div className="max-w-3xl mx-auto px-6">
         <ScrollAnimation>
-          <div className="text-center mb-16">
-            <p className="text-sm font-semibold text-primary mb-3 tracking-wide">FAQ</p>
-            <h2 className="text-2xl md:text-4xl font-extrabold text-heading mb-4">
-              자주 묻는 질문
-            </h2>
-          </div>
+          <p className="text-sm tracking-[0.15em] uppercase text-muted mb-4 font-medium">FAQ</p>
+          <h2 className="text-2xl md:text-[2.5rem] font-bold text-heading leading-tight mb-16">
+            자주 묻는 질문
+          </h2>
         </ScrollAnimation>
 
-        <div className="space-y-3">
+        <div className="border-t border-line">
           {faqs.map((faq, i) => (
-            <ScrollAnimation key={i} delay={i * 80}>
-              <div className="border border-line rounded-2xl overflow-hidden">
+            <ScrollAnimation key={i} delay={i * 60}>
+              <div className="border-b border-line">
                 <button
                   onClick={() => setOpenIndex(openIndex === i ? null : i)}
-                  className="w-full flex items-center justify-between p-5 md:p-6 text-left cursor-pointer hover:bg-surface/50 transition-colors duration-200"
+                  className="w-full flex items-center justify-between py-6 text-left cursor-pointer group"
                 >
-                  <span className="text-base font-semibold text-heading pr-4">{faq.question}</span>
+                  <span className="text-[15px] font-medium text-heading pr-8 group-hover:text-primary transition-colors duration-200">{faq.question}</span>
                   <ChevronDown
-                    className={`w-5 h-5 text-muted flex-shrink-0 transition-transform duration-300 ${
+                    className={`w-4 h-4 text-muted flex-shrink-0 transition-transform duration-300 ${
                       openIndex === i ? "rotate-180" : ""
                     }`}
                   />
                 </button>
                 <div
                   className={`overflow-hidden transition-all duration-300 ${
-                    openIndex === i ? "max-h-60 opacity-100" : "max-h-0 opacity-0"
+                    openIndex === i ? "max-h-40 opacity-100 pb-6" : "max-h-0 opacity-0"
                   }`}
                 >
-                  <p className="px-5 md:px-6 pb-5 md:pb-6 text-sm text-body leading-relaxed">
-                    {faq.answer}
-                  </p>
+                  <p className="text-sm text-body leading-relaxed pr-12">{faq.answer}</p>
                 </div>
               </div>
             </ScrollAnimation>

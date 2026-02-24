@@ -1,6 +1,5 @@
 "use client";
 import { useEffect, useState, useRef } from "react";
-import { ShieldCheck, Users, Clock, HeartHandshake } from "lucide-react";
 import ScrollAnimation from "./ScrollAnimation";
 
 function AnimatedNumber({ target, suffix = "", duration = 2000 }) {
@@ -25,38 +24,32 @@ function AnimatedNumber({ target, suffix = "", duration = 2000 }) {
       },
       { threshold: 0.5 }
     );
-
     if (ref.current) observer.observe(ref.current);
     return () => observer.disconnect();
   }, [target, duration]);
 
-  return (
-    <span ref={ref}>
-      {count.toLocaleString()}{suffix}
-    </span>
-  );
+  return <span ref={ref}>{count.toLocaleString()}{suffix}</span>;
 }
 
 const stats = [
-  { icon: Users, number: 8000, suffix: "+", label: "상담 완료 고객" },
-  { icon: ShieldCheck, number: 96, suffix: "%", label: "고객 만족도" },
-  { icon: Clock, number: 30, suffix: "초", label: "평균 신청 소요시간" },
-  { icon: HeartHandshake, number: 10, suffix: "년+", label: "보험 설계 경력" },
+  { number: 8000, suffix: "+", label: "상담 완료" },
+  { number: 96, suffix: "%", label: "고객 만족도" },
+  { number: 30, suffix: "초", label: "신청 소요시간" },
+  { number: 10, suffix: "년+", label: "설계 경력" },
 ];
 
 export default function Trust() {
   return (
-    <section className="py-16 md:py-20 bg-surface">
-      <div className="max-w-5xl mx-auto px-5">
+    <section className="py-20 md:py-24 bg-[#0F0F0F]">
+      <div className="max-w-4xl mx-auto px-6">
         <ScrollAnimation>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
             {stats.map((stat, i) => (
               <div key={i} className="text-center">
-                <stat.icon className="w-8 h-8 text-primary mx-auto mb-3" />
-                <p className="text-2xl md:text-3xl font-extrabold text-heading mb-1">
+                <p className="text-3xl md:text-4xl font-bold text-white mb-2 tracking-tight">
                   <AnimatedNumber target={stat.number} suffix={stat.suffix} />
                 </p>
-                <p className="text-sm text-muted">{stat.label}</p>
+                <p className="text-sm text-[#666666]">{stat.label}</p>
               </div>
             ))}
           </div>
