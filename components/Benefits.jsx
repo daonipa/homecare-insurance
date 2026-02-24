@@ -26,7 +26,7 @@ const benefits = [
 
 export default function Benefits() {
   return (
-    <section className="py-28 md:py-36 bg-white">
+    <section className="py-28 md:py-36 bg-[#F5F5F7]">
       <div className="max-w-4xl mx-auto px-6">
         <ScrollAnimation>
           <div className="text-center mb-16">
@@ -40,7 +40,7 @@ export default function Benefits() {
         <div className="grid md:grid-cols-2 gap-6">
           {benefits.map((item, i) => (
             <ScrollAnimation key={i} delay={i * 100}>
-              <div className="bg-white border border-[#E0E0E0] rounded-2xl p-8 shadow-[0_2px_8px_rgba(0,0,0,0.06)] hover:shadow-[0_8px_24px_rgba(0,0,0,0.1)] hover:-translate-y-1 transition-all duration-300">
+              <div className="bg-white rounded-2xl p-8 shadow-[0_2px_8px_rgba(0,0,0,0.08)]">
                 <span className="inline-flex items-center justify-center w-9 h-9 rounded-lg bg-primary-light text-xs font-bold text-primary mb-5">{item.number}</span>
                 <h3 className="text-[17px] font-bold text-heading mb-3">{item.title}</h3>
                 <p className="text-sm text-body leading-relaxed">{item.description}</p>

@@ -14,7 +14,7 @@ export default function Solution() {
   };
 
   return (
-    <section className="py-28 md:py-36 bg-surface">
+    <section className="py-28 md:py-36 bg-white">
       <div className="max-w-4xl mx-auto px-6">
         <ScrollAnimation>
           <div className="text-center mb-16">
@@ -31,7 +31,7 @@ export default function Solution() {
         <div className="grid md:grid-cols-2 gap-5 mb-14">
           {features.map((item, i) => (
             <ScrollAnimation key={i} delay={i * 80}>
-              <div className="bg-white rounded-2xl p-7 border border-[#E0E0E0] shadow-[0_2px_8px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_24px_rgba(0,0,0,0.1)] hover:-translate-y-1 transition-all duration-300">
+              <div className="bg-[#F5F5F7] rounded-2xl p-7">
                 <h4 className="font-bold text-heading mb-1.5">{item.title}</h4>
                 <p className="text-sm text-muted">{item.desc}</p>
               </div>
