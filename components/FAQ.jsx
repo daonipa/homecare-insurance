@@ -33,10 +33,12 @@ export default function FAQ() {
     <section className="py-24 md:py-32 bg-white">
       <div className="max-w-3xl mx-auto px-6">
         <ScrollAnimation>
-          <p className="text-sm tracking-[0.15em] uppercase text-muted mb-4 font-medium">FAQ</p>
-          <h2 className="text-2xl md:text-[2.5rem] font-bold text-heading leading-tight mb-16">
-            자주 묻는 질문
-          </h2>
+          <div className="text-center mb-14">
+            <p className="text-sm tracking-[0.15em] uppercase text-muted mb-4 font-medium">FAQ</p>
+            <h2 className="text-2xl md:text-[2.5rem] font-bold text-heading leading-tight">
+              자주 묻는 질문
+            </h2>
+          </div>
         </ScrollAnimation>
 
         <div className="border-t border-line">
