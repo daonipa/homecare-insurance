@@ -7,13 +7,8 @@ export default function Hero() {
   };
 
   return (
-    <section className="hero-gradient min-h-screen flex items-center justify-center relative overflow-hidden">
-      {/* Decorative circles */}
-      <div className="absolute top-20 left-10 w-32 h-32 bg-primary opacity-5 rounded-full blur-3xl" />
-      <div className="absolute bottom-20 right-10 w-48 h-48 bg-primary opacity-5 rounded-full blur-3xl" />
-
-      <div className="max-w-4xl mx-auto px-5 py-20 text-center relative z-10">
-        {/* Badge */}
+    <section className="hero-gradient relative overflow-hidden">
+      <div className="max-w-4xl mx-auto px-6 py-28 md:py-36 lg:py-44 text-center relative z-10">
         <div className="inline-flex items-center gap-2 bg-white/80 backdrop-blur-sm border border-line rounded-full px-4 py-2 mb-8">
           <Heart className="w-4 h-4 text-primary" fill="currentColor" />
           <span className="text-sm font-medium text-body">재가급여보험 무료 설계</span>
@@ -47,9 +42,8 @@ export default function Hero() {
           무료 상담 · 강제 가입 없음 · 30초 소요
         </p>
 
-        {/* Scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 float-animation">
-          <ArrowDown className="w-6 h-6 text-muted" />
+        <div className="mt-10 float-animation">
+          <ArrowDown className="w-6 h-6 text-muted mx-auto" />
         </div>
       </div>
     </section>
